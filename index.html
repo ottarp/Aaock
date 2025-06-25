@@ -1,98 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8" />
-    <title>Your Cycling Club</title>
+    <title>Ålesund og Omegn Cykleklubb</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #333;
-            margin: 0;
-        }
-        header {
-            background: #2c3e50;
-            padding: 1rem;
-            color: white;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        nav {
-            background: #34495e;
-            padding: 0.5rem;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 1rem;
-            text-decoration: none;
-        }
-        main {
-            padding: 2rem;
-            max-width: 900px;
-            margin: auto;
-        }
-        h2 {
-            color: #2c3e50;
-        }
-        .card {
-            background: white;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 0.5rem;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
-        }
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        @media (max-width: 600px) {
-            nav a {
-                display: block;
-                margin: 0.5rem 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
     <header>
-        <h1>Your Cycling Club</h1>
-        <p>Come ride with us — all skill levels welcome!</p>
+        <img src="./aoc_logo_original_small.jpg" alt="Ålesund og Omegn Cykleklubb" />
+        <h1>Ålesund og Omegn Cykleklubb</h1>
     </header>
     <nav>
-        <a href="#about">About</a>
-        <a href="#rides">Upcoming Rides</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">Om oss</a>
+        <a href="#rides">Turer</a>
+        <a href="#contact">Kontakt</a>
     </nav>
     <main>
         <section id="about" class="card">
-            <h2>About Us</h2>
-            <p>We’re a local cycling club passionate about riding together, staying fit, and enjoying the outdoors. Join us for weekly rides, social events, and cycling adventures all year long.</p>
+            <h2>Om oss</h2>
+            <p>Vi er en lokal sykkelklubb i Ålesund og omegn som arrangerer fellestreninger, turer og sosiale samlinger. Alle er velkommen uansett erfaring!</p>
         </section>
 
         <section id="rides" class="card">
-            <h2>Upcoming Rides</h2>
+            <h2>Kommende turer</h2>
             <ul>
-                <li><strong>Saturday 9:00 AM:</strong> Easy group ride around the lake.</li>
-                <li><strong>Wednesday 6:00 PM:</strong> Speed training session at the park.</li>
-                <li><strong>Sunday 8:00 AM:</strong> 50km countryside tour — coffee stop halfway.</li>
+                <li><strong>Lørdag 09:00:</strong> Rolig langtur (50 km), oppmøte på torget.</li>
+                <li><strong>Onsdag 18:00:</strong> Intervalltrening i parken.</li>
+                <li><strong>Søndag 10:00:</strong> Kosetur med kaffepause underveis.</li>
             </ul>
         </section>
 
         <section id="contact" class="card">
-            <h2>Contact Us</h2>
-            <p>Email us at <a href="mailto:cyclingclub@example.com">cyclingclub@example.com</a> or follow us on 
-               <a href="https://www.instagram.com/" target="_blank">Instagram</a> and 
-               <a href="https://www.facebook.com/" target="_blank">Facebook</a> for updates.</p>
+            <h2>Kontakt oss</h2>
+            <p>Send e-post til <a href="mailto:post@aocykleklubb.no">post@aocykleklubb.no</a> eller følg oss på <a href="#">Facebook</a> og <a href="#">Instagram</a> for oppdateringer.</p>
         </section>
     </main>
     <footer>
-        &copy; <span id="year"></span> Your Cycling Club — All rights reserved.
+        &copy; <span id="year"></span> Ålesund og Omegn Cykleklubb
     </footer>
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
