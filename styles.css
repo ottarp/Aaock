@@ -1,31 +1,22 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f8f8f8;
-    color: #333;
-    margin: 0;
+.container {
+    max-width: 1170px;
+    margin: auto;
 }
 
-header {
-    background: #4A8C3C; /* grønn */
-    padding: 1rem;
-    color: white;
+.top-header {
+    background: white;
+    padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
 }
 
-header img {
+.club-logo {
     height: 70px;
-    margin-right: 1rem;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 1.5rem;
 }
 
 nav {
     background: #3e7634;
-    padding: 0.5rem;
+    padding: 0.5rem 0;
     text-align: center;
 }
 
@@ -39,15 +30,20 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 main {
     padding: 2rem;
-    max-width: 900px;
+    max-width: 1170px;
     margin: auto;
 }
 
 h2 {
     color: #4A8C3C;
-    margin-top: 0;
 }
 
 .card {
@@ -56,10 +52,6 @@ h2 {
     margin: 1rem 0;
     border-radius: 0.5rem;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
-
-a {
-    color: #3e7634;
 }
 
 footer {
