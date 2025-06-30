@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Build navigation
     nav.innerHTML = menuData.menu.map(item =>
-        `<a href="/${item.path}" data-path="${item.path}">${item.title}</a>`
+        `<a href="?page=${item.path}" data-path="${item.path}">${item.title}</a>`
     ).join("");
 
     // Handle navigation clicks
@@ -17,21 +17,26 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (link) {
             e.preventDefault();
             const path = link.dataset.path;
-            history.pushState({ path }, "", `/${path}`);
+            history.pushState({ path }, "", `?page=${path}`);
             loadContent(path);
         }
     });
 
     // Handle back/forward
     window.addEventListener("popstate", (e) => {
-        const path = (e.state && e.state.path) || location.pathname.slice(1);
+        const path = (e.state && e.state.path) || getPageFromUrl();
         loadContent(path);
     });
 
     // Load initial page
-    const initialPath = location.pathname.slice(1) || "about";
+    const initialPath = getPageFromUrl() || "about";
     loadContent(initialPath);
 });
+
+function getPageFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("page");
+}
 
 async function loadContent(path) {
     const main = document.querySelector("main");
