@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 async function loadContent(path) {
     const main = document.querySelector("main");
-    const menuData = await fetch("./menu.json").then(res => res.json());
+    const menuData = await fetch("menu.json").then(res => res.json());
     const item = menuData.menu.find(m => m.path === path);
     if (item) {
         const html = await fetch(item.file).then(res => res.text());
