@@ -1,6 +1,6 @@
 {
   "menu": [
-    { "title": "Om oss", "path": "about", "file": "about.html" },
-    { "title": "Kontakt", "path": "contact", "file": "contact.html" }
+    { "title": "Om oss", "path": "about", "file": "./about.html" },
+    { "title": "Kontakt", "path": "contact", "file": "./contact.html" }
   ]
 }
