@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     // Load initial page
-    const initialPath = getPageFromUrl() || "about";
+    const initialPath = getPageFromUrl() || "home";
     loadContent(initialPath);
 });
 
